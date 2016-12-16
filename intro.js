@@ -45,10 +45,15 @@ for (var i = 0; i < items.length; i++) {
     setEventListeners(item);
 };
 
+var cache = {};
 
 var fib = function(x) {
+    if (x in cache) {
+        return cache[x];
+    }
+
     if (x<=1){
-	return 1;
+        return 1;
     }
 
     return fib(x-2) + fib(x-1);
