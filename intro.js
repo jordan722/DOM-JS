@@ -27,13 +27,7 @@ var setHeading = function(e) {
 };
 
 var removeItem = function(e) {
-    var items = document.getElementsByTagName("li");
-    for (var i = 0; i < items.length; i++) {
-        if (items[i].innerHTML == this.innerHTML) {
-            items[i].remove();
-            return;
-        }
-    }
+    this.remove();
 };
 
 var setEventListeners = function(item) {
