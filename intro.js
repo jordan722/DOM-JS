@@ -44,3 +44,23 @@ for (var i = 0; i < items.length; i++) {
     var item = items[i];
     setEventListeners(item);
 };
+
+
+var fib = function(x) {
+    if (x<=1){
+	return 1;
+    }
+
+    return fib(x-2) + fib(x-1);
+};
+
+
+var fibadd = function() {
+    var list = document.getElementById('fiblist');
+    var new_item = document.createElement("li");
+    new_item.innerHTML = fib(list.childElementCount);
+    list.appendChild(new_item);
+}
+
+var fibbutton = document.getElementById("f");
+fibbutton.addEventListener("click", fibadd);
