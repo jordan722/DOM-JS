@@ -56,7 +56,10 @@ var fib = function(x) {
         return 1;
     }
 
-    return fib(x-2) + fib(x-1);
+    var result = fib(x-2) + fib(x-1);
+    cache[x] = result;
+
+    return result;
 };
 
 
